@@ -90,6 +90,11 @@ class Processor:
         Для использования в качестве SQL-функции"""
         return int(st in cont.split(','))
 
+    def _ingoing(st, substr):
+        """Возвращает индекс первого вхождения substr
+        в основную строку st"""
+        return int(substr in st)
+
     u_db = sqlite3.connect('data/users.db')
 
     u_db.row_factory = sqlite3.Row
@@ -100,6 +105,7 @@ class Processor:
 
     m_db = sqlite3.connect('data/messages.db')
     m_db.row_factory = sqlite3.Row
+    m_db.create_function('INGOING', 2, _ingoing)
     m_c = m_db.cursor()
 
     r_db = sqlite3.connect('data/requests.db')
