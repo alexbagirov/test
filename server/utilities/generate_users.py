@@ -8,11 +8,11 @@ except:
     pass
 
 import sqlite3, random
-from hashlib import md5
+from hashlib import sha256
 
 def cjoin(ls):
     return ','.join(map(str, ls))
-        
+
 def get_dialogs(name):
     db = sqlite3.connect('../data/messages.db')
     c = db.cursor()
@@ -34,12 +34,12 @@ c.execute('''PRAGMA foreign_keys = 1''')
 c.execute('''CREATE TABLE users
     (name text PRIMARY KEY,
      password text,
-     
+
      friends text,
      favorites text,
      blacklist text,
      dialogs text)''')
-     
+
 c.execute('''CREATE TABLE profiles
  (name text PRIMARY KEY
   REFERENCES users(name),
@@ -48,11 +48,11 @@ c.execute('''CREATE TABLE profiles
   birthday int,
   about text,
   image blob)''')
-     
+
 for user in users:
     pswd = (user + '2016')[::-1] + 'mysalt'
-    md = md5(pswd.encode())
-    
+    md = sha256(pswd.encode())
+
     friends = list({random.choice(users) for i in range(random.randint(1,5))})
     favorites = random.choice(friends)
     blacklist = random.choice(list(set(users).difference(friends)))
@@ -65,7 +65,7 @@ for user in users:
     favorites,
     blacklist,
     dl))
-    
+
     c.execute('''INSERT INTO profiles VALUES
     (?,?,?,?,?,?)''',
     (user,
@@ -74,6 +74,6 @@ for user in users:
     1355292732,
     'I am ' + user,
     b'lolno'))
-    
+
 db.commit()
 db.close()

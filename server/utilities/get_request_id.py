@@ -1,9 +1,8 @@
 import time
-from hashlib import md5
+from hashlib import sha256
 
 code = input()
 st = str(time.time()).replace('.', '') + code
 
-md = md5(st.encode())
+md = sha256(st.encode())
 print(md.hexdigest())
-

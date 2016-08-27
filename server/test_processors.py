@@ -6,7 +6,7 @@ for i in os.listdir('data'):
 import unittest, time
 from processors import *
 from request_handler import RequestHandler
-from hashlib import md5
+from hashlib import sha256
 from installer import Installer
 
 Installer.install()
