@@ -51,7 +51,7 @@ c.execute('''CREATE TABLE profiles
 
 for user in users:
     pswd = (user + '2016')[::-1] + 'mysalt'
-    md = sha256(pswd.encode())
+    sha = sha256(pswd.encode())
 
     friends = list({random.choice(users) for i in range(random.randint(1,5))})
     favorites = random.choice(friends)
@@ -60,7 +60,7 @@ for user in users:
     c.execute('''INSERT INTO users VALUES
     (?,?,?,?,?,?)''',
     (user,
-    md.hexdigest(),
+    sha.hexdigest(),
     cjoin(friends),
     favorites,
     blacklist,

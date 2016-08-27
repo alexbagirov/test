@@ -124,8 +124,8 @@ class Processor:
     def _add_session(self, nick, ip):
         """Добавляет пользователя nick по IP-адресу ip в таблицу сессий
         Вызывает BadRequest, если такая комбинация данных уже есть в таблице"""
-        md = sha256((ip + nick).encode())
-        session_id = md.hexdigest()
+        sha = sha256((ip + nick).encode())
+        session_id = sha.hexdigest()
         try:
             with self.s_db:
                 self.s_c.execute('''INSERT INTO sessions

@@ -24,10 +24,10 @@ c.execute('''CREATE TABLE sessions
           ip text)''')
 
 for i in online:
-    md = sha256((get_ip(i) + i).encode())
+    sha = sha256((get_ip(i) + i).encode())
     c.execute('''INSERT INTO sessions VALUES
     (?,?,?)''', (i,
-    md.hexdigest(),
+    sha.hexdigest(),
     get_ip(i)))
 
 db.commit()

@@ -2,5 +2,5 @@
 
 from hashlib import sha256
 password = (input() + '2016')[::-1] + 'mysalt'
-md = sha256(password.encode())
-print(md.hexdigest())
+sha = sha256(password.encode())
+print(sha.hexdigest())
