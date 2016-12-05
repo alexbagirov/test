@@ -4,8 +4,6 @@
 # Chat-Client
 Simple desktop chat client written in Python.
 
-=============
-
 ## Getting Started
 ### Prerequisites
 Here is a list of Python dependencies we're using right now:
@@ -31,18 +29,14 @@ You can download the latest code from `master` using the special button on this 
 #### Packet Manager
 Coming later :zap:
 
-=============
-
-### Features
+## Features
 Simple yet powerful chat offers you to:
 
 * Chat with your frineds using encryption :lock:
 * Stay online when you want - we do not use a lot of bandwidth at your computer :metal:
 * Be updated with the latest news as ASAP :hourglass_flowing_sand:
 
-=============
-
-### Contributing
+## Contributing
 We will be happy to see your PRs. If you can, please consider these topics we would also like to recieve help with:
 
 - [ ] Testing
@@ -50,12 +44,8 @@ We will be happy to see your PRs. If you can, please consider these topics we wo
 - [ ] Performance
 - [ ] Security Issues
 
-=============
-
-### License
+## License
 This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/MoarCatz/chat-client/blob/master/LICENSE) file for details.
 
-=============
-
-### Any Questions?
+## Any Questions?
 Shoot us a mail at chat@alexfox.co. We will be happy to see you :sparkles:
