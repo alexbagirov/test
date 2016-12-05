@@ -53,7 +53,7 @@ We will be happy to see your PRs. If you can, please consider these topics we wo
 =============
 
 ### License
-This project is licensed under the GPL-3.0 License - see the LICENSE.md file for details.
+This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/MoarCatz/chat-client/blob/master/LICENSE) file for details.
 
 =============
 
