@@ -10,8 +10,10 @@ Here is a list of Python dependencies we're using right now:
 
 * [Kivy](https://github.com/kivy/kivy)
 * [Tornado](https://github.com/tornadoweb/tornado)
+* [rsa](https://pypi.python.org/pypi/rsa)
+* [psycopg2](http://initd.org/psycopg/)
 
-A good news is that you don't need to install them when using prebuilt package.
+The good news is that you don't need to install them when using prebuilt package.
 
 =============
 
@@ -20,11 +22,12 @@ Here is a step by step example of how you can get our app up and running:
 
 #### From Precompiled Package (recommended)
 1. Head over to the latest release and grab the most suitable package for you. 
-2. The last thing you need is to open the file you've just downloaded. 
+2. Run the file you've just downloaded. 
 3. Done'n'done :saxophone::turtle:
 
 #### Using The Source Code
-You can download the latest code from `master` using the special button on this page. _**Caution**_: there might be some errors even on master branch so we do not want you to use this code without any special occasion. Releases are just fine for you because of that :smiley_cat:
+You can download the latest code from `master` using the special button on this page.  
+_**Caution**_: development version is unstable and may contain errors of any kind. To improve security and user experience, we **highly** recommend you not to use the source code directly, but instead grab a packages from _Releases_ :smiley_cat:
 
 #### Packet Manager
 Coming later :zap:
@@ -34,7 +37,7 @@ Simple yet powerful chat offers you to:
 
 * Chat with your frineds using encryption :lock:
 * Stay online when you want - we do not use a lot of bandwidth at your computer :metal:
-* Be updated with the latest news as ASAP :hourglass_flowing_sand:
+* Be up-to-date constantly thanks to the WebSocket protocol :hourglass_flowing_sand:
 
 ## Contributing
 We will be happy to see your PRs. If you can, please consider these topics we would also like to recieve help with:
