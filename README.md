@@ -53,4 +53,9 @@ We will be happy to see your PRs. If you can, please consider these topics we wo
 =============
 
 ### License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the GPL-3.0 License - see the LICENSE.md file for details.
+
+=============
+
+### Any Questions?
+Shoot us a mail at chat@alexfox.co. We will be happy to see you :sparkles:
