@@ -11,7 +11,6 @@ Here is a list of Python dependencies we're using right now:
 * [Kivy](https://github.com/kivy/kivy)
 * [Tornado](https://github.com/tornadoweb/tornado)
 * [rsa](https://pypi.python.org/pypi/rsa)
-* [psycopg2](http://initd.org/psycopg/)
 
 The good news is that you don't need to install them when using prebuilt package.
 
